@@ -1,8 +1,7 @@
 #include "solong.h"
 
-int	main(int ac, char **av)
+int check_args(int ac, char **av)
 {
-	int	fd;
 	int	map_c;
 
 	if (ac != 2)
@@ -13,7 +12,13 @@ int	main(int ac, char **av)
 	map_c = ft_av_control(av[1], "reb");
 	if (map_c == 0)
 		return (0);
-	fd = open(av[1], O_RDONLY);
-	get_map(fd);
+	return(1);
+}
+
+int	main(int ac, char **av)
+{
+	if(check_args(ac, av) == 0)
+		return(0);
+	
 	return (EXIT_SUCCESS);
 }

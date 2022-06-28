@@ -1,5 +1,6 @@
 #include "solong.h"
 
+
 void	ft_control_file(char *map)
 {
 	int	fd;
@@ -58,6 +59,5 @@ char	*get_map(int fd)
 		left_str = ft_strjoin(left_str, buff);
 	}
 	free(buff);
-	printf("%s", left_str);
 	return (left_str);
 }
