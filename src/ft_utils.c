@@ -60,28 +60,3 @@ char	*ft_strjoin(char *left_str, char *buff)
 	free(left_str);
 	return (str);
 }
-
-char	*check(int fd)
-{
-	static char *left_str;
-	char		*buff;
-	int			rd_bytes;
-
-	buff = malloc((BUFFER_SIZE + 1) * sizeof(char));
-	if (!buff)
-		return (NULL);
-	rd_bytes = 1;
-	while (rd_bytes != 0)
-	{
-		rd_bytes = read(fd, buff, BUFFER_SIZE);
-		if (rd_bytes == -1)
-		{
-			free(buff);
-			return (NULL);
-		}
-		buff[rd_bytes] = '\0';
-		left_str = ft_strjoin(left_str, buff);
-	}
-	free(buff);
-	return (left_str);
-}

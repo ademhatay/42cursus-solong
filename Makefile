@@ -8,3 +8,9 @@ RM = rm -rf
 all:
 	gcc -Wall -Wextra -Werror $(SRC) -o ${NAME}
 
+clean: rm -rf
+
+fclean: ${RM}
+
+re:
+	rm -rf all
