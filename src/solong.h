@@ -62,7 +62,7 @@ void	ft_control_file(char *map);
 int		ft_av_control(char *map, char *true_map);
 char	*get_map(int fd);
 void get_map_struct(t_var *var, char **av);
-int check_map(t_var *var);
+int check_map(t_var var);
 void create_matrix(t_var *var, char **mtx);
 
 int get_x(t_var *var,char *map);

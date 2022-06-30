@@ -34,7 +34,6 @@ int get_y(t_var *var,char *map)
 void create_matrix(t_var *var, char **mtx)
 {
 	var->map.mtx = mtx;
-	printf("%c\n", var->map.mtx[3][8]);
 }
 
 void get_map_struct(t_var *var, char **av)

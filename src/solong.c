@@ -7,7 +7,6 @@ int	main(int ac, char **av)
 	if(check_args(ac, av) == 0)
 		return(0);
 	get_map_struct(&var, av);
-	// check_map(&var);
-
+	check_map(var);
 	return (EXIT_SUCCESS);
 }
