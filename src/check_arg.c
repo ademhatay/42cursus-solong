@@ -1,6 +1,5 @@
 #include "solong.h"
 
-
 void	ft_control_file(char *map)
 {
 	int	fd;
@@ -37,27 +36,17 @@ int	ft_av_control(char *map, char *true_map)
 	return (1);
 }
 
-char	*get_map(int fd)
+int check_args(int ac, char **av)
 {
-	static char	*left_str;
-	char		*buff;
-	int			rd_bytes;
+	int	map_c;
 
-	buff = malloc((BUFFER_SIZE + 1) * sizeof(char));
-	if (!buff)
-		return (NULL);
-	rd_bytes = 1;
-	while (rd_bytes != 0)
+	if (ac != 2)
 	{
-		rd_bytes = read(fd, buff, BUFFER_SIZE);
-		if (rd_bytes == -1)
-		{
-			free(buff);
-			return (NULL);
-		}
-		buff[rd_bytes] = '\0';
-		left_str = ft_strjoin(left_str, buff);
+		ft_putendl("Haritayı Belirtin");
+		return (0);
 	}
-	free(buff);
-	return (left_str);
+	map_c = ft_av_control(av[1], "reb");
+	if (map_c == 0)
+		return (0);
+	return(1);
 }
