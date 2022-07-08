@@ -7,6 +7,7 @@ SRC = ./src/solong.c \
 	./src/check_arg.c \
 	./src/check_map.c \
 	./src/write_map.c \
+	
 
 RM = rm -rf
 

@@ -113,7 +113,5 @@ int check_map(t_var var)
 	check_sprites(var);
 	check_ret(var);
 	check_char(var);
-	printf("y = %d\n", var.map.size.y);
-	printf("x = %d\n", var.map.size.x);
-	return (0);
+	return (1);
 }

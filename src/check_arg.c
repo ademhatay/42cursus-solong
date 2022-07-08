@@ -28,7 +28,7 @@ int	ft_av_control(char *map, char *true_map)
 		else
 		{
 			ft_putendl("Harita uzantısı '.ber' değil");
-			return (0);
+			exit(0);
 		}
 		len--;
 	}
@@ -43,10 +43,10 @@ int check_args(int ac, char **av)
 	if (ac != 2)
 	{
 		ft_putendl("Haritayı Belirtin");
-		return (0);
+		exit(0);
 	}
 	map_c = ft_av_control(av[1], "reb");
 	if (map_c == 0)
-		return (0);
+		exit(0);
 	return(1);
 }

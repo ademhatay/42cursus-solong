@@ -81,7 +81,6 @@ void	ft_putstr(const char *str);
 void	ft_putendl(const char *str);
 char	*ft_strjoin(char *left_str, char *buff);
 char	*ft_substr(char const *s, unsigned int start, int len);
-
 char	**ft_split(char const *s, char c);
 
 int check_args(int ac, char **av);
@@ -89,10 +88,11 @@ void	ft_control_file(char *map);
 int		ft_av_control(char *map, char *true_map);
 char	*get_map(int fd);
 void get_map_struct(t_var *var, char **av);
+int get_x(t_var *var,char *map);
+int get_y(t_var *var,char *map);
 int check_map(t_var var);
 void create_matrix(t_var *var, char **mtx);
 int write_map(t_var var);
 
-int get_x(t_var *var,char *map);
-int get_y(t_var *var,char *map);
+
 #endif
