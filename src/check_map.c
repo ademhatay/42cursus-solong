@@ -15,13 +15,19 @@ int	check_wall(t_var var)
 			while (var.map.mtx[row][col])
 			{
 				if (var.map.mtx[row][col] != '1')
-					ft_putendl("Geçersiz harita... Üst veya alt duvarlar ile çevrili değil.");
+					{
+						ft_putendl("Geçersiz harita... Üst veya alt duvarlar ile çevrili değil.");
+						exit(1);
+					}
 				col++;
 			}
 		}
 		if (var.map.mtx[row][0] != '1'
 			|| var.map.mtx[row][var.map.size.x - 1] != '1')
-			ft_putendl("Geçersiz harita... Yanlar duvar ile  çevrili değil.");
+			{
+				ft_putendl("Geçersiz harita... Yanlar duvar ile  çevrili değil.");
+				exit(1);
+			}
 		row++;
 	}
 	return (0);
@@ -50,7 +56,10 @@ int	check_sprites(t_var var)
 		row++;
 	}
 	if (has[0] != 1 || has[1] != 1 || has[2] != 1)
+	{
 		ft_putendl("HATALI HARİTA: fazla veya eksik sprite");
+		exit(1);
+	}
 	return (0);
 }
 
@@ -62,7 +71,10 @@ int	check_ret(t_var var)
 	while (row < var.map.size.y)
 	{
 		if (var.map.size.x != (int)ft_strlen(var.map.mtx[row]))
+		{
 			ft_putendl("HATALI HARİTA: harita boyutu eşit uyumsuz");
+			exit(1);
+		}
 		row++;
 	}
 	return (0);
@@ -82,7 +94,10 @@ int	check_char(t_var var)
 			if (var.map.mtx[row][col] != '0' && var.map.mtx[row][col] != '1'
 				&& var.map.mtx[row][col] != 'P' && var.map.mtx[row][col] != 'E'
 				&& var.map.mtx[row][col] != 'C')
-				ft_putendl("HATALI HARİTA: tanimsiz karakter");
+				{
+					ft_putendl("HATALI HARİTA: tanimsiz karakter");
+					exit(1);
+				}
 			col++;
 		}
 		row++;
