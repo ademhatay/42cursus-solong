@@ -1,9 +1,8 @@
 #include "solong.h"
 
-
-int get_x(t_var *var,char *map)
+int	get_x(t_var *var, char *map)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	var->map.size.x = 0;
@@ -15,9 +14,9 @@ int get_x(t_var *var,char *map)
 	return (var->map.size.x);
 }
 
-int get_y(t_var *var,char *map)
+int	get_y(t_var *var, char *map)
 {
-	int i;
+	int	i;
 
 	i = 0;
 	var->map.size.y = 0;
@@ -31,19 +30,19 @@ int get_y(t_var *var,char *map)
 	return (var->map.size.y);
 }
 
-void create_matrix(t_var *var, char **mtx)
+void	create_matrix(t_var *var, char **mtx)
 {
 	var->map.mtx = mtx;
 }
 
-void get_map_struct(t_var *var, char **av)
+void	get_map_struct(t_var *var, char **av)
 {
-	int fd;
+	int	fd;
 
 	fd = open(av[1], O_RDONLY);
 	get_x(var, get_map(fd));
 	get_y(var, get_map(fd));
-	create_matrix(var, ft_split(get_map(fd),'\n'));
+	create_matrix(var, ft_split(get_map(fd), '\n'));
 }
 
 char	*get_map(int fd)

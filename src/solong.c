@@ -14,7 +14,8 @@ int	main(int ac, char **av)
 	get_map_struct(&var, av);
 	check_map(var);
 	var.mlx = mlx_init();
-	var.win = mlx_new_window(var.mlx, var.map.size.x * 64, var.map.size.y * 64, "So long");
+	var.win = mlx_new_window(var.mlx, var.map.size.x * 64,
+			var.map.size.y * 64, "So long");
 	get_init_position(&var);
 	count_collec(&var);
 	write_map(var);

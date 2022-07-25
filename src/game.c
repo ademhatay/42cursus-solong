@@ -48,10 +48,10 @@ int	check_collect(t_var *var)
 {
 	if (count_collec(var) == 0)
 	{
-		ft_putendl("\e[34m\e[1mCONGRATS\n!!!! You WON !!!!\e[0m\n");
+		ft_putendl("Helal YUSUFİ!!! Kazandın!!!");
 		exit(0);
 	}
 	else
-		printf("\e[35m\e[1mPlease, collect all diamonds!!!\e[0m\n");
+		ft_putendl("Hala toplanmamış altın var!!!");
 	return (0);
 }

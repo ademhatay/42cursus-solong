@@ -12,7 +12,7 @@
 # define X_EVENT_KEY_PRESS		2
 # define X_EVENT_KEY_EXIT		17
 
-# if defined(__APPLE__) && defined(__MACH__)
+# if defined(__APPLE__)
 #  define LEFT_KEY				123	
 #  define RIGHT_KEY				124	
 #  define UP_KEY				126
@@ -22,19 +22,9 @@
 #  define D_KEY					2
 #  define W_KEY					13
 #  define ESC 					53
+#  define Q 					12
 
-# else
-#  define LEFT_KEY				65361
-#  define RIGHT_KEY				65363
-#  define UP_KEY				65362
-#  define DOWN_KEY				65364
-#  define A_KEY					97
-#  define W_KEY					119
-#  define S_KEY					115
-#  define D_KEY					100
-#  define ESC					65307
 # endif
-
 
 typedef struct s_vector
 {
@@ -83,27 +73,27 @@ char	*ft_strjoin(char *left_str, char *buff);
 char	*ft_substr(char const *s, unsigned int start, int len);
 char	**ft_split(char const *s, char c);
 
-int check_args(int ac, char **av);
+int		check_args(int ac, char **av);
 void	ft_control_file(char *map);
 int		ft_av_control(char *map, char *true_map);
 char	*get_map(int fd);
-void get_map_struct(t_var *var, char **av);
-int get_x(t_var *var,char *map);
-int get_y(t_var *var,char *map);
-int check_map(t_var var);
-void create_matrix(t_var *var, char **mtx);
-int	get_init_position(t_var *var);
-int write_map(t_var var);
-int	count_collec(t_var *var);
-int	check_collect(t_var *var);
-int	mlx_close(t_var *var);
-int	key_press(int key, t_var *var);
-int	move_left(t_var *var);
-int	move_right(t_var *var);
-int	move_down(t_var *var);
-int	move_up(t_var *var);
-int	movements(int key, t_var *var);
-int	free_exit(t_var *var, char *msg);
-int	free_map(t_var *var);
+void	get_map_struct(t_var *var, char **av);
+int		get_x(t_var *var, char *map);
+int		get_y(t_var *var, char *map);
+int		check_map(t_var var);
+void	create_matrix(t_var *var, char **mtx);
+int		get_init_position(t_var *var);
+int		write_map(t_var var);
+int		count_collec(t_var *var);
+int		check_collect(t_var *var);
+int		mlx_close(t_var *var);
+int		key_press(int key, t_var *var);
+int		move_left(t_var *var);
+int		move_right(t_var *var);
+int		move_down(t_var *var);
+int		move_up(t_var *var);
+int		movements(int key, t_var *var);
+int		free_exit(t_var *var, char *msg);
+int		free_map(t_var *var);
 
 #endif
