@@ -24,7 +24,6 @@ int	load_map(t_var var, int row, int col)
 }
 
 
-
 int write_map(t_var var)
 {
 	int		row;

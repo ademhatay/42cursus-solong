@@ -92,7 +92,18 @@ int get_x(t_var *var,char *map);
 int get_y(t_var *var,char *map);
 int check_map(t_var var);
 void create_matrix(t_var *var, char **mtx);
+int	get_init_position(t_var *var);
 int write_map(t_var var);
-
+int	count_collec(t_var *var);
+int	check_collect(t_var *var);
+int	mlx_close(t_var *var);
+int	key_press(int key, t_var *var);
+int	move_left(t_var *var);
+int	move_right(t_var *var);
+int	move_down(t_var *var);
+int	move_up(t_var *var);
+int	movements(int key, t_var *var);
+int	free_exit(t_var *var, char *msg);
+int	free_map(t_var *var);
 
 #endif

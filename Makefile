@@ -7,6 +7,10 @@ SRC = ./src/solong.c \
 	./src/check_arg.c \
 	./src/check_map.c \
 	./src/write_map.c \
+	./src/game.c \
+	./src/key_manager.c \
+	./src/free_map.c \
+	./src/move.c \
 	
 
 RM = rm -rf
