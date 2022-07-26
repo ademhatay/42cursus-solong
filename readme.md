@@ -17,3 +17,5 @@ make all
 ```
 ./solong/maps/map.ber
 ```
+<img width="1730" alt="Game" src="https://user-images.githubusercontent.com/66277966/181023111-af342736-1b4c-4d6e-b5a2-6fbbd625b605.png">
+<img width="582" alt="stepCounter" src="https://user-images.githubusercontent.com/66277966/181023119-0a774766-c28c-4667-aaa4-5f46e9f94c3f.png">
