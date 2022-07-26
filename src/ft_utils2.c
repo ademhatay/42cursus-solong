@@ -3,8 +3,9 @@
 char	*ft_substr(char const *s, unsigned int start, int len)
 {
 	char	*new_str;
-	int	i;
-	int	j;
+	int		i;
+	int		j;
+
 	new_str = (char *)malloc(len + 1);
 	if (!s || !new_str)
 		return (0);
@@ -19,6 +20,7 @@ char	*ft_substr(char const *s, unsigned int start, int len)
 static int	wordcounter(const char *s, char c)
 {
 	int	i;
+
 	i = 0;
 	while (*s)
 	{
@@ -32,9 +34,11 @@ static int	wordcounter(const char *s, char c)
 	}
 	return (i);
 }
+
 static int	charcounter(const char *s, char c)
 {
 	int	i;
+
 	i = 0;
 	while (*s && (*s != c))
 	{
@@ -43,6 +47,7 @@ static int	charcounter(const char *s, char c)
 	}
 	return (i);
 }
+
 char	**ft_split(char const *s, char c)
 {
 	char	**ret;

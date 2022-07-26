@@ -18,7 +18,7 @@ int	free_map(t_var *var)
 
 int	free_exit(t_var *var, char *msg)
 {
-	printf("%s", msg);
+	ft_putendl(msg);
 	free_map(var);
 	exit(0);
 }

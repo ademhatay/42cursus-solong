@@ -23,8 +23,7 @@ int	load_map(t_var var, int row, int col)
 	return (0);
 }
 
-
-int write_map(t_var var)
+int	write_map(t_var var)
 {
 	int		row;
 	int		col;

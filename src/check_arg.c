@@ -36,7 +36,7 @@ int	ft_av_control(char *map, char *true_map)
 	return (1);
 }
 
-int check_args(int ac, char **av)
+int	check_args(int ac, char **av)
 {
 	int	map_c;
 
@@ -48,5 +48,5 @@ int check_args(int ac, char **av)
 	map_c = ft_av_control(av[1], "reb");
 	if (map_c == 0)
 		exit(0);
-	return(1);
+	return (1);
 }
