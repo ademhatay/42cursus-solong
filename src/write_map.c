@@ -15,7 +15,7 @@ int	load_map(t_var var, int row, int col)
 		var.img.img_ptr = mlx_xpm_file_to_image(var.mlx, "./img/collec.xpm",
 				&var.img.size.x, &var.img.size.y);
 	else if (var.map.mtx[row][col] == 'P')
-		var.img.img_ptr = mlx_xpm_file_to_image(var.mlx, "./img/sprite1.xpm",
+		var.img.img_ptr = mlx_xpm_file_to_image(var.mlx, "./img/sprite.xpm",
 				&var.img.size.x, &var.img.size.y);
 	mlx_put_image_to_window(var.mlx, var.win, var.img.img_ptr, 64 * col,
 		64 * row);

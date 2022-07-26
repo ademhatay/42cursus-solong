@@ -12,16 +12,17 @@ int	key_press(int key, t_var *var)
 
 	init_steps = var->game.count_steps;
 	if (key == ESC)
-	{
 		free_exit(var, "Oyun (ESC) ile Kapatıldı\n");
-		exit(0);
-	}
 	else
 	{
 		movements(key, var);
 	}
 	if (init_steps != var->game.count_steps)
-		printf("Steps: %d\n", var->game.count_steps);
+	{
+		ft_putstr("Steps: ");
+		ft_putnbr(var->game.count_steps);
+		ft_putchar('\n');
+	}
 	write_map(*var);
 	return (0);
 }
