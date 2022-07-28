@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   game.c                                             :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ahatay <ahatay@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/07/28 13:58:21 by ahatay            #+#    #+#             */
+/*   Updated: 2022/07/28 13:58:22 by ahatay           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "solong.h"
 
 int	get_init_position(t_var *var)
@@ -52,6 +64,9 @@ int	check_collect(t_var *var)
 		exit(0);
 	}
 	else
-		ft_putendl("Hala toplanmamış altın var!!!");
+	{
+		ft_putnbr(var->game.count_collec);
+		ft_putendl(" tane toplanmayan altın var");
+	}
 	return (0);
 }

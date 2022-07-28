@@ -1,3 +1,15 @@
+/* ************************************************************************** */
+/*                                                                            */
+/*                                                        :::      ::::::::   */
+/*   free_map.c                                         :+:      :+:    :+:   */
+/*                                                    +:+ +:+         +:+     */
+/*   By: ahatay <ahatay@student.42kocaeli.com.tr>   +#+  +:+       +#+        */
+/*                                                +#+#+#+#+#+   +#+           */
+/*   Created: 2022/07/28 13:57:10 by ahatay            #+#    #+#             */
+/*   Updated: 2022/07/28 13:57:16 by ahatay           ###   ########.fr       */
+/*                                                                            */
+/* ************************************************************************** */
+
 #include "solong.h"
 
 int	free_map(t_var *var)
@@ -19,6 +31,6 @@ int	free_map(t_var *var)
 int	free_exit(t_var *var, char *msg)
 {
 	ft_putendl(msg);
-	free_map(var);
 	exit(0);
+	free_map(var);
 }
